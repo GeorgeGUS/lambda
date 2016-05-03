@@ -2169,6 +2169,10 @@
   overflow: visible;
   clip: auto; }
 
+a {
+  text-decoration: none;
+  color: white; }
+
 .main-header {
   position: absolute;
   top: 0;
@@ -2210,7 +2214,6 @@
     .horizontal li a {
       padding: 55px 15px 45px;
       display: block;
-      text-decoration: none;
       -webkit-transition: all, cubic-bezier(0.455, 0.03, 0.515, 0.955), 300ms;
       -moz-transition: all, cubic-bezier(0.455, 0.03, 0.515, 0.955), 300ms;
       transition: all, cubic-bezier(0.455, 0.03, 0.515, 0.955), 300ms; }
@@ -2254,7 +2257,96 @@
     font-weight: 400;
     color: white;
     text-align: center; }
+  #promo .promo-divider {
+    margin: 35px auto;
+    height: 43px;
+    width: 232px;
+    background: url("../img/promo-divider.png") no-repeat center; }
+  #promo .promo-btns {
+    text-align: center; }
+    #promo .promo-btns a:hover {
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -o-transform: scale(1.05);
+      transform: scale(1.05); }
+  #promo .btn-left, #promo .btn-right {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    height: 55px;
+    width: 226px;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 55px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    transition: all 300ms ease-out; }
+  #promo .btn-right {
+    margin-left: 30px;
+    margin-right: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.7); }
+
+.content-divider-gold, .content-divider-white, .main-footer .footer-item-divider {
+  margin: 15px auto 30px;
+  height: 24px;
+  width: 247px;
+  background: url("../img/content-divider-gold.png") no-repeat center;
+  background-size: cover; }
+
+.content-divider-white, .main-footer .footer-item-divider {
+  background: url("../img/content-divider-white.png") no-repeat center;
+  background-size: cover; }
 
 h2, h3 {
   color: #CC9900;
   font-family: "Yeseva One", "Times", cursive; }
+
+#about, #reservations {
+  min-height: 200px;
+  background-image: url("../img/pattern-semicircles.png"), -webkit-linear-gradient( left top, rgba(32, 90, 91, 0.1), white);
+  background-image: url("../img/pattern-semicircles.png"), linear-gradient(to right bottom, rgba(32, 90, 91, 0.1), white);
+  -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14); }
+
+#menu {
+  min-height: 200px;
+  background-image: url("../img/pattern-pentagons.png"), -webkit-linear-gradient( left top, rgba(32, 90, 91, 0.1), white);
+  background-image: url("../img/pattern-pentagons.png"), linear-gradient(to right bottom, rgba(32, 90, 91, 0.1), white);
+  -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14); }
+
+.main-footer {
+  color: white;
+  background-color: #1a1a1a; }
+  .main-footer .footer-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    margin-right: 16px;
+    width: 370px;
+    text-align: center; }
+    .main-footer .footer-item:last-child {
+      margin-right: 0; }
+  .main-footer .footer-item-title {
+    font-size: 21px;
+    line-height: 24px;
+    color: white; }
+  .main-footer .footer-item-divider {
+    height: 20px;
+    width: 200px; }
+  .main-footer a {
+    font-size: 0; }
+    .main-footer a i {
+      font-size: 16px;
+      line-height: 24px; }
