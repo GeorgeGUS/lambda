@@ -1,0 +1,98 @@
+@import "bourbon/bourbon";
+@import "variables";
+@import "fonts";
+
+@mixin inl-block($va-pos: top, $mr: -4px) {
+	display: inline-block;
+	vertical-align: $va-pos;
+	margin-right: $mr;
+	}
+
+@mixin font($ff:'Arial', $fz:14, $fs:normal, $fw:400, $clr:black) {
+	font-family: $ff;
+	font-size: $fz;
+	font-style: $fs;
+	font-weight: $fw;
+	color: $clr;
+	}
+
+.main-header {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	@include clearfix;
+	//background-color: gray;
+	}
+
+.main-container {
+	margin: 0 auto;
+	width: 1250px;
+	}
+
+.main-logo {
+	float: left;
+	@include inl-block;
+	@include size(165px 110px);
+	font-size: 0;
+	background: url(../img/main-logo.png) no-repeat center;
+	}
+
+.main-navigation {
+	float: right;
+	padding-right: 40px;
+	}
+.horizontal {
+	margin: 0;
+	padding: 0;
+	@include inl-block;
+		li {
+			@include inl-block;
+			a {
+				padding: 55px 15px 45px;
+				display: block;
+				text-decoration: none;
+				@include transition(all, $ease-in-out-quad, 300ms);
+				&.main-nav-item {
+					margin-left: 20px;
+					@include font($gentium, 21px, normal, 700, white);
+					&:hover {
+						box-shadow: inset 0 5px rgba(255, 255, 255, 0.7);
+						}
+					}
+				&.nav-social {
+					padding: 55px 10px 45px;
+					font-size: 0;
+					i {
+						font-size: 21px;
+						color: $gold;
+						@include transition(all, $ease-in-out-quad, 300ms);
+						&:hover {
+							color: lighten($gold, 25);
+							}
+						}
+					}
+				}
+		}
+	}
+
+#promo {
+	@include box-sizing(border-box);
+	padding-top: 240px;
+	min-height: 750px;
+	background: gray url("../img/bg-promo.jpg") no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	.promo-slogan {
+		margin: 0 auto;
+		padding: 0;
+		width: 970px;
+		@include font($yeseva, 90px, normal, 400, white);
+		text-align: center;
+		}
+	}
+
+h2, h3 {
+  color: $gold;
+  font-family: $yeseva;
+}
