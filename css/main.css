@@ -2295,20 +2295,46 @@ a {
     background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.7); }
 
-.content-divider-gold, .content-divider-white, .main-footer .footer-item-divider {
-  margin: 15px auto 30px;
-  height: 24px;
-  width: 247px;
-  background: url("../img/content-divider-gold.png") no-repeat center;
-  background-size: cover; }
+.main-content {
+  padding: 100px 0;
+  text-align: center; }
+
+.content-gold {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -4px;
+  text-align: center;
+  width: 430px; }
+  .content-gold .content-title {
+    margin: 0;
+    font-family: "Yeseva One", "Times", cursive;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    color: #CC9900;
+    line-height: 24px; }
+  .content-gold .content-divider-gold, .content-gold .content-divider-white, .content-gold .main-footer .footer-item-divider, .main-footer .content-gold .footer-item-divider {
+    margin: 15px auto 30px;
+    height: 24px;
+    width: 247px;
+    background: url("../img/content-divider-gold.png") no-repeat center;
+    background-size: cover; }
+  .content-gold .content-text {
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+    line-height: 24px; }
+
+.food-picture {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -4px; }
 
 .content-divider-white, .main-footer .footer-item-divider {
   background: url("../img/content-divider-white.png") no-repeat center;
   background-size: cover; }
-
-h2, h3 {
-  color: #CC9900;
-  font-family: "Yeseva One", "Times", cursive; }
 
 #about, #reservations {
   min-height: 200px;

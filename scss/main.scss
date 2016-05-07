@@ -100,9 +100,7 @@ a {
 		}
 	.promo-btns{
 		text-align: center;
-
 		a:hover {
-
 			@include transform(scale(1.05));
 			}
 		}
@@ -126,11 +124,34 @@ a {
 		}
 	}
 
-.content-divider-gold {
-	margin: 15px auto 30px;
-	@include size(247px 24px);
-	background: url("../img/content-divider-gold.png") no-repeat center;
-	background-size: cover;
+.main-content {
+	padding: 100px 0;
+	text-align: center
+	}
+
+.content-gold {;
+	@include inl-block();
+	text-align: center;
+	width: 430px;
+		.content-title{
+			margin: 0;
+			@include font($yeseva, 36px, normal, 400, $gold);
+			line-height: 24px;
+			}
+		.content-divider-gold {
+			margin: 15px auto 30px;
+			@include size(247px 24px);
+			background: url("../img/content-divider-gold.png") no-repeat center;
+			background-size: cover;
+			}
+		.content-text {
+			@include font($lato, 16px, normal, 400, black);
+			line-height: 24px;
+			}
+	}
+
+.food-picture{
+	@include inl-block();
 	}
 
 .content-divider-white {
@@ -138,11 +159,6 @@ a {
 	background: url("../img/content-divider-white.png") no-repeat center;
 	background-size: cover;
 	}
-
-h2, h3 {
-  color: $gold;
-  font-family: $yeseva;
-}
 
 #about, #reservations {
 	min-height: 200px;
