@@ -101,7 +101,10 @@ a {
 	.promo-btns{
 		text-align: center;
 		a:hover {
-			@include transform(scale(1.05));
+			@include transform(scale(0.99));
+			-webkit-box-shadow:  0px 0px 15px rgba(255, 255, 255, 0.4);
+			-moz-box-shadow:  0px 0px 15px rgba(255, 255, 255, 0.4);
+			box-shadow:  0px 0px 15px rgba(255, 255, 255, 0.4);
 			}
 		}
 	.btn-left {
@@ -113,7 +116,7 @@ a {
 		line-height: 55px;
 		background-color: rgba(0,0,0,0.5);
 		border: 1px solid rgba(0,0,0,0.7);
-		@include transition(all 300ms ease-out);
+		@include transition(all 250ms ease-out);
 		}
 	.btn-right {
 		@extend .btn-left;
@@ -134,12 +137,11 @@ a {
 	text-align: center;
 	width: 430px;
 		.content-title{
-			margin: 0;
 			@include font($yeseva, 36px, normal, 400, $gold);
 			line-height: 24px;
 			}
 		.content-divider-gold {
-			margin: 15px auto 30px;
+			margin: 20px auto 30px;
 			@include size(247px 24px);
 			background: url("../img/content-divider-gold.png") no-repeat center;
 			background-size: cover;
@@ -150,8 +152,17 @@ a {
 			}
 	}
 
-.food-picture{
-	@include inl-block();
+.content-white {
+	@extend .content-gold;
+		.content-title,
+		.content-text {
+			color: white;
+			}
+	.content-divider-white {
+		@extend .content-divider-gold;
+		background: url("../img/content-divider-white.png") no-repeat center;
+		background-size: cover;
+		}
 	}
 
 .content-divider-white {
@@ -159,6 +170,40 @@ a {
 	background: url("../img/content-divider-white.png") no-repeat center;
 	background-size: cover;
 	}
+
+.food-picture {
+	margin: -45px 0 -70px;
+	@include inl-block();
+	}
+
+#ingredients {
+	background: $gray url("../img/bg-ingredients.jpg") no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	.ingredients-text-bg {
+		padding: 80px 0;
+		float: right;
+		width: 570px;
+		background: url("../img/bg-ingredients-text.png");
+		-webkit-background-size: cover;
+		background-size: cover;
+		}
+	.ingredient-pictures {
+		margin: 60px auto 0;
+		//text-align: center;
+		}
+	.ingredient-picture {
+		@include inl-block();
+		margin-right: 30px;
+		@include size(100px);
+		border: 5px solid rgba(255, 255, 255, 0.09);
+		-webkit-border-radius:50%; -moz-border-radius:50%; border-radius:50%;
+		-webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box;
+		overflow: hidden;
+		}
+	@include clearfix;
+	}
+
 
 #about, #reservations {
 	min-height: 200px;
@@ -181,6 +226,30 @@ a {
 	-moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14);
 	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14);
 	}
+
+#reviews {
+	background: $gray url("../img/bg-reviews.jpg") no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	.reviews-text-bg {
+		margin: 0 auto;
+		padding: 80px 0;
+		width: 770px;
+		background: url("../img/bg-rewiews-text.png");
+		-webkit-background-size: cover;
+		background-size: cover;
+		}
+	.content-white {
+		width: 630px;
+
+		}
+	.review-text {
+		@include font($gentium, 25px, normal, 400, white);
+		line-height: 45px;
+		}
+	}
+
 
 .main-footer {
 	color: white;
