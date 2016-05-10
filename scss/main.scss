@@ -200,6 +200,9 @@ a {
 		-webkit-border-radius:50%; -moz-border-radius:50%; border-radius:50%;
 		-webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box;
 		overflow: hidden;
+		&:last-child {
+			margin-right: 0;
+			}
 		}
 	@include clearfix;
 	}
@@ -252,10 +255,12 @@ a {
 
 
 .main-footer {
+	padding: 50px 0;
 	color: white;
 	background-color: tint(black, 10%);
 	.footer-item {
 		@include inl-block();
+		@include font($opensans, 16px, normal, 400, white);
 		margin-right: 16px;
 		width: 370px;
 		text-align: center;
@@ -264,16 +269,21 @@ a {
 			}
 		}
 	.footer-item-title {
-		font-size: 21px;
+		@include font($yeseva, 21px, normal, 400, white);
 		line-height: 24px;
-		color: white;
 		}
 	.footer-item-divider {
+		margin: 20px auto;
 		@extend .content-divider-white;
 		@include size(200px 20px);
 		}
-	a {
+	.pay-sys,
+	.social-icon {
 		font-size: 0;
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+			}
 		i {
 			font-size: 16px;
 			line-height: 24px;

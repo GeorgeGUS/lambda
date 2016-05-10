@@ -2375,6 +2375,8 @@ a {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
     overflow: hidden; }
+    #ingredients .ingredient-picture:last-child {
+      margin-right: 0; }
   #ingredients::after {
     clear: both;
     content: "";
@@ -2418,26 +2420,42 @@ a {
     line-height: 45px; }
 
 .main-footer {
+  padding: 50px 0;
   color: white;
   background-color: #1a1a1a; }
   .main-footer .footer-item {
     display: inline-block;
     vertical-align: top;
     margin-right: -4px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
     margin-right: 16px;
     width: 370px;
     text-align: center; }
     .main-footer .footer-item:last-child {
       margin-right: 0; }
   .main-footer .footer-item-title {
+    font-family: "Yeseva One", "Times", cursive;
     font-size: 21px;
-    line-height: 24px;
-    color: white; }
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    line-height: 24px; }
   .main-footer .footer-item-divider {
+    margin: 20px auto;
     height: 20px;
     width: 200px; }
-  .main-footer a {
-    font-size: 0; }
-    .main-footer a i {
+  .main-footer .pay-sys,
+  .main-footer .social-icon {
+    font-size: 0;
+    margin-right: 10px; }
+    .main-footer .pay-sys:last-child,
+    .main-footer .social-icon:last-child {
+      margin-right: 0; }
+    .main-footer .pay-sys i,
+    .main-footer .social-icon i {
       font-size: 16px;
       line-height: 24px; }
