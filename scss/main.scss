@@ -241,6 +241,45 @@ a {
 	-moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14);
 	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14);
 	@include half-width;
+	.menu-item{
+		text-align: left;
+		position: relative;
+		border: 10px solid transparent;// в этом месте надо подумать над бордером
+		.menu-item-title {
+			margin: 0;
+			@include inl-block();
+			@include font($yeseva, 21px, normal, 400, $gold);
+			line-height: 24px;
+			}
+		.menu-item-price {
+			position: absolute;
+			right: 3px;
+			@extend .menu-item-title;
+			}
+		.menu-item-divider {
+			margin-top: 10px;
+			width: 430px;
+			height: 1px;
+			background-image: url("../img/menu-item-divider.png");
+			}
+		&.special {
+			.special-flag {
+				width: 69px;
+				height: 22px;
+				display: block;
+				position: absolute;
+				top: -20px;
+				right: 0;
+				@include font($lato, 14px, normal, 400, white);
+				text-align: center;
+				line-height: 22px;
+				background-image: url("../img/menu-item-flag-bg.png");
+				}
+			}
+		}
+	.special-flag {
+		display: none;
+		}
 	}
 
 

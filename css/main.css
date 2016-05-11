@@ -2407,6 +2407,46 @@ a {
     clear: both;
     content: "";
     display: table; }
+  #menu .menu-item {
+    text-align: left;
+    position: relative;
+    border: 10px solid transparent; }
+    #menu .menu-item .menu-item-title, #menu .menu-item .menu-item-price {
+      margin: 0;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: -4px;
+      font-family: "Yeseva One", "Times", cursive;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 400;
+      color: #CC9900;
+      line-height: 24px; }
+    #menu .menu-item .menu-item-price {
+      position: absolute;
+      right: 3px; }
+    #menu .menu-item .menu-item-divider {
+      margin-top: 10px;
+      width: 430px;
+      height: 1px;
+      background-image: url("../img/menu-item-divider.png"); }
+    #menu .menu-item.special .special-flag {
+      width: 69px;
+      height: 22px;
+      display: block;
+      position: absolute;
+      top: -20px;
+      right: 0;
+      font-family: "Lato", "Arial", sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      color: white;
+      text-align: center;
+      line-height: 22px;
+      background-image: url("../img/menu-item-flag-bg.png"); }
+  #menu .special-flag {
+    display: none; }
 
 #reservations .half-width-pic {
   display: inline-block;
