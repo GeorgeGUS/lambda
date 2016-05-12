@@ -316,7 +316,7 @@ a {
 
 	.reviews-text-bg {
 		margin: 0 auto;
-		padding: 80px 0;
+		padding: 70px 0;
 		width: 770px;
 		background: url("../img/bg-rewiews-text.png");
 		-webkit-background-size: cover;
@@ -327,8 +327,22 @@ a {
 
 		}
 	.review-text {
+		position: relative;
 		@include font($gentium, 25px, normal, 400, white);
 		line-height: 45px;
+		.quote-sign {
+			display: block;
+			position: absolute;
+			top: 10px;
+			left: -45px;
+			@include font($georgia, 96px, normal, 400, rgba(242, 244, 244, 0.5));
+			line-height: 45px;
+			}
+		.review-author {
+			display: block;
+			margin: 25px 0 0 0;
+			@include font($lato, 18px, normal, 400, white);
+			}
 		}
 	}
 
