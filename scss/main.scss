@@ -232,6 +232,7 @@ a {
 	}
 
 #menu {
+	padding: 70px 0;
 	min-height: 200px;
 	@include background-image(
 							url("../img/pattern-pentagons.png"),
@@ -241,10 +242,19 @@ a {
 	-moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14);
 	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14);
 	@include half-width;
+	.content-gold {
+		width: auto;
+		}
+	.content-gold:not(:first-child) .content-title {
+		margin-top: 60px;
+		}
 	.menu-item{
+		margin-bottom: 20px;
+		padding: 12px;
+		width: 430px;
 		text-align: left;
 		position: relative;
-		border: 10px solid transparent;// в этом месте надо подумать над бордером
+		border: 1px solid transparent;
 		.menu-item-title {
 			margin: 0;
 			@include inl-block();
@@ -253,7 +263,7 @@ a {
 			}
 		.menu-item-price {
 			position: absolute;
-			right: 3px;
+			right: 15px;
 			@extend .menu-item-title;
 			}
 		.menu-item-divider {
@@ -262,14 +272,22 @@ a {
 			height: 1px;
 			background-image: url("../img/menu-item-divider.png");
 			}
+		.menu-item-text {
+			margin: 12px 0 0 0;
+			@include font($lato, 16px, normal, 400, black);
+			line-height: 16px;
+			}
 		&.special {
+			//-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			//border: 1px solid $gold;
+			border-image: url(../img/menu-item-border.png) 1 1 stretch;
 			.special-flag {
-				width: 69px;
-				height: 22px;
 				display: block;
 				position: absolute;
-				top: -20px;
-				right: 0;
+				top: -22px;
+				right: -1px;
+				width: 69px;
+				height: 22px;
 				@include font($lato, 14px, normal, 400, white);
 				text-align: center;
 				line-height: 22px;

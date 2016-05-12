@@ -2391,6 +2391,7 @@ a {
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.14); }
 
 #menu {
+  padding: 70px 0;
   min-height: 200px;
   background-image: url("../img/pattern-pentagons.png"), -webkit-linear-gradient( left top, rgba(32, 90, 91, 0.1), white);
   background-image: url("../img/pattern-pentagons.png"), linear-gradient(to right bottom, rgba(32, 90, 91, 0.1), white);
@@ -2407,10 +2408,17 @@ a {
     clear: both;
     content: "";
     display: table; }
+  #menu .content-gold, #menu .content-white {
+    width: auto; }
+  #menu .content-gold:not(:first-child) .content-title, #menu .content-white:not(:first-child) .content-title {
+    margin-top: 60px; }
   #menu .menu-item {
+    margin-bottom: 20px;
+    padding: 12px;
+    width: 430px;
     text-align: left;
     position: relative;
-    border: 10px solid transparent; }
+    border: 1px solid transparent; }
     #menu .menu-item .menu-item-title, #menu .menu-item .menu-item-price {
       margin: 0;
       display: inline-block;
@@ -2424,27 +2432,37 @@ a {
       line-height: 24px; }
     #menu .menu-item .menu-item-price {
       position: absolute;
-      right: 3px; }
+      right: 15px; }
     #menu .menu-item .menu-item-divider {
       margin-top: 10px;
       width: 430px;
       height: 1px;
       background-image: url("../img/menu-item-divider.png"); }
-    #menu .menu-item.special .special-flag {
-      width: 69px;
-      height: 22px;
-      display: block;
-      position: absolute;
-      top: -20px;
-      right: 0;
+    #menu .menu-item .menu-item-text {
+      margin: 12px 0 0 0;
       font-family: "Lato", "Arial", sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       font-style: normal;
       font-weight: 400;
-      color: white;
-      text-align: center;
-      line-height: 22px;
-      background-image: url("../img/menu-item-flag-bg.png"); }
+      color: black;
+      line-height: 16px; }
+    #menu .menu-item.special {
+      border-image: url(../img/menu-item-border.png) 1 1 stretch; }
+      #menu .menu-item.special .special-flag {
+        display: block;
+        position: absolute;
+        top: -22px;
+        right: -1px;
+        width: 69px;
+        height: 22px;
+        font-family: "Lato", "Arial", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+        line-height: 22px;
+        background-image: url("../img/menu-item-flag-bg.png"); }
   #menu .special-flag {
     display: none; }
 
