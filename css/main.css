@@ -2236,7 +2236,8 @@ a {
           -moz-transition: all, cubic-bezier(0.455, 0.03, 0.515, 0.955), 300ms;
           transition: all, cubic-bezier(0.455, 0.03, 0.515, 0.955), 300ms; }
           .horizontal li a.nav-social i:hover {
-            color: #ffd24d; }
+            color: #ffcc33;
+            text-shadow: 0 0 5px #d6ad33; }
 
 #promo {
   -webkit-box-sizing: border-box;
@@ -2558,7 +2559,14 @@ a {
   .main-footer .pay-sys,
   .main-footer .social-icon {
     font-size: 0;
-    margin-right: 10px; }
+    margin-right: 10px;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    transition: all 300ms ease; }
+    .main-footer .pay-sys:hover,
+    .main-footer .social-icon:hover {
+      color: #ffcc33;
+      text-shadow: 0 0 5px #d6ad33; }
     .main-footer .pay-sys:last-child,
     .main-footer .social-icon:last-child {
       margin-right: 0; }
