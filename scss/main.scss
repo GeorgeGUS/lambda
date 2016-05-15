@@ -2,16 +2,26 @@
 @import "colors";
 @import "fonts";
 
+.border-box {
+	-webkit-box-sizing: border-box;	-moz-box-sizing: border-box;	box-sizing: border-box;
+	}
+.content-box {
+	-webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box;
+	}
+.padding-box {
+	-webkit-box-sizing: padding-box; -moz-box-sizing: padding-box; box-sizing: padding-box;
+	}
+
+
 @mixin inl-block($va-pos: top, $mr: -4px) {
 	display: inline-block;
 	vertical-align: $va-pos;
 	margin-right: $mr;
 	}
 
-@mixin font($ff:'Arial', $fz:14, $fs:normal, $fw:400, $clr:black) {
+@mixin font($ff:'Arial', $fz:14, $fw:400, $clr:black) {
 	font-family: $ff;
 	font-size: $fz;
-	font-style: $fs;
 	font-weight: $fw;
 	color: $clr;
 	}
@@ -58,7 +68,7 @@ a {
 				@include transition(all, $ease-in-out-quad, 300ms);
 				&.main-nav-item {
 					margin-left: 20px;
-					@include font($gentium, 21px, normal, 700, white);
+					@include font($gentium, 21px, 700, white);
 					&:hover {
 						box-shadow: inset 0 5px rgba(255, 255, 255, 0.7);
 						}
@@ -81,7 +91,7 @@ a {
 	}
 
 #promo {
-	@include box-sizing(border-box);
+	@extend .border-box;
 	padding-top: 240px;
 	min-height: 750px;
 	background: gray url("../img/bg-promo.jpg") no-repeat center;
@@ -91,7 +101,7 @@ a {
 		margin: 0 auto;
 		padding: 0;
 		width: 970px;
-		@include font($yeseva, 90px, normal, 400, white);
+		@include font($yeseva, 90px, 400, white);
 		text-align: center;
 		}
 	.promo-divider {
@@ -111,7 +121,7 @@ a {
 	.btn-left {
 		@include inl-block();
 		@include size(226px 55px);
-		@include font($lato, 18px, normal, 400, white);
+		@include font($lato, 18px, 400, white);
 		text-transform: uppercase;
 		text-align: center;
 		line-height: 55px;
@@ -138,7 +148,7 @@ a {
 	text-align: center;
 	width: 430px;
 		.content-title{
-			@include font($yeseva, 36px, normal, 400, $gold);
+			@include font($yeseva, 36px, 400, $gold);
 			line-height: 24px;
 			}
 		.content-divider-gold {
@@ -148,7 +158,7 @@ a {
 			background-size: cover;
 			}
 		.content-text {
-			@include font($lato, 16px, normal, 400, black);
+			@include font($lato, 16px, 400, black);
 			line-height: 24px;
 			}
 	}
@@ -259,7 +269,7 @@ a {
 		.menu-item-title {
 			margin: 0;
 			@include inl-block();
-			@include font($yeseva, 21px, normal, 400, $gold);
+			@include font($yeseva, 21px, 400, $gold);
 			line-height: 24px;
 			}
 		.menu-item-price {
@@ -275,12 +285,10 @@ a {
 			}
 		.menu-item-text {
 			margin: 12px 0 0 0;
-			@include font($lato, 16px, normal, 400, black);
+			@include font($lato, 16px, 400, black);
 			line-height: 16px;
 			}
 		&.special {
-			//-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
-			//border: 1px solid $gold;
 			border-image: url(../img/menu-item-border.png) 1 1 stretch;
 			.special-flag {
 				display: block;
@@ -289,7 +297,7 @@ a {
 				right: -1px;
 				width: 69px;
 				height: 22px;
-				@include font($lato, 14px, normal, 400, white);
+				@include font($lato, 14px, 400, white);
 				text-align: center;
 				line-height: 22px;
 				background-image: url("../img/menu-item-flag-bg.png");
@@ -299,15 +307,6 @@ a {
 	.special-flag {
 		display: none;
 		}
-	}
-
-
-#reservations {
-	.half-width-pic {
-		@include inl-block();
-		margin-right: 30px;
-		}
-	@include half-width;
 	}
 
 #reviews {
@@ -329,20 +328,73 @@ a {
 		}
 	.review-text {
 		position: relative;
-		@include font($gentium, 25px, normal, 400, white);
+		@include font($gentium, 25px, 400, white);
 		line-height: 45px;
 		.quote-sign {
 			display: block;
 			position: absolute;
 			top: 10px;
 			left: -45px;
-			@include font($georgia, 96px, normal, 400, rgba(242, 244, 244, 0.5));
+			@include font($georgia, 96px, 400, rgba(242, 244, 244, 0.5));
 			line-height: 45px;
 			}
 		.review-author {
 			display: block;
 			margin: 25px 0 0 0;
-			@include font($lato, 18px, normal, 400, white);
+			@include font($lato, 18px, 400, white);
+			}
+		}
+	}
+
+#reservations {
+	@include half-width;
+	.half-width-pic {
+		@include inl-block();
+		margin-right: 30px;
+		}
+	.content-title {
+		margin: 0;
+		}
+	.reservation-form{
+		margin: 30px auto 0;
+		width: 430px;
+		@include half-width;
+		text-align: left;
+		.half {
+			width: 200px;
+			}
+		label {
+			position: relative;
+			margin-bottom: 10px;
+			display: block;
+			@include font($opensans, 14px, 700, $golder);
+			.fa {
+				position: absolute;
+				top: 40px;
+				right: 10px;
+				color: #7C7C7C;
+				}
+			}
+		input, select {
+			margin-bottom: 30px;
+			@extend .border-box;
+			padding: 10px 30px 10px 15px;
+			width: 200px;
+			height: 36px;
+			@include placeholder{
+				@include font($opensans, 16px, 400, #7c7c7c);
+				font-style: italic;
+				}
+			border: 1px solid #7c7c7c;
+			&:focus {
+				border-color: $golder;
+				outline: none;
+				}
+			}
+
+		button {
+			margin: 30px auto 0;
+			text-align: center;
 			}
 		}
 	}
@@ -354,7 +406,7 @@ a {
 	background-color: tint(black, 10%);
 	.footer-item {
 		@include inl-block();
-		@include font($opensans, 16px, normal, 400, white);
+		@include font($opensans, 16px, 400, white);
 		margin-right: 16px;
 		width: 370px;
 		text-align: center;
@@ -363,7 +415,7 @@ a {
 			}
 		}
 	.footer-item-title {
-		@include font($yeseva, 21px, normal, 400, white);
+		@include font($yeseva, 21px, 400, white);
 		line-height: 24px;
 		}
 	.footer-item-divider {

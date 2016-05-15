@@ -239,22 +239,27 @@
 							</p>
 						</section>
 						<form action="#" method="get" class="reservation-form">
-							<label for="name">Name</label>
-							<input id="name" type="text" placeholder="your name *">
-							<label for="email">Email</label>
-							<input id="email" type="email" placeholder="your email *">
-							<label for="date">Date</label>
-							<input id="date" type="date" placeholder="date *"><i class="fa fa-calendar" aria-hidden="true"></i>
-							<label for="partynumber">Party number</label>
-							<select name="partynumber" id="partynumber">
-								<!--option[value="$"]{Party $}*5-->
-								<option value="def">party number</option>
-								<option value="1">Party 1</option>
-								<option value="2">Party 2</option>
-								<option value="3">Party 3</option>
-								<option value="4">Party 4</option>
-								<option value="5">Party 5</option>
-							</select><i class="fa fa-angle-down" aria-hidden="true"></i>
+							<div class="half left-side">
+								<label for="name">Name</label>
+								<input id="name" type="text" placeholder="your name *">
+								<label for="date">Date<i class="fa fa-calendar" aria-hidden="true"></i></label>
+								<input id="date" type="text" placeholder="date *">
+							</div>
+							<div class="half right-side">
+								<label for="email">Email</label>
+								<input id="email" type="email" placeholder="your email *">
+								<label for="partynumber">Party number<i class="fa fa-angle-down" aria-hidden="true"></i></label>
+								<input id="partynumber" type="text" placeholder="partynumber">
+								<!--<select name="partynumber" id="partynumber">-->
+									<!--&lt;!&ndash;option[value="$"]{Party $}*5&ndash;&gt;-->
+									<!--<option value="def">party number</option>-->
+									<!--<option value="1">Party 1</option>-->
+									<!--<option value="2">Party 2</option>-->
+									<!--<option value="3">Party 3</option>-->
+									<!--<option value="4">Party 4</option>-->
+									<!--<option value="5">Party 5</option>-->
+								<!--</select>-->
+							</div>
 							<button class="order-btn">Book now!</button>
 						</form>
 					</section>
