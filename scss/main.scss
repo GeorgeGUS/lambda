@@ -356,16 +356,17 @@ a {
 		margin: 0;
 		}
 	.reservation-form{
-		margin: 30px auto 0;
+		margin: 20px auto 0;
 		width: 430px;
 		@include half-width;
 		text-align: left;
 		.half {
 			width: 200px;
+			margin-bottom: 10px;
 			}
 		label {
 			position: relative;
-			margin-bottom: 10px;
+			margin-bottom: 5px;
 			display: block;
 			@include font($opensans, 14px, 700, $golder);
 			.fa {
@@ -376,7 +377,7 @@ a {
 				}
 			}
 		input, select {
-			margin-bottom: 30px;
+			margin-bottom: 25px;
 			@extend .border-box;
 			padding: 10px 30px 10px 15px;
 			width: 200px;
@@ -391,10 +392,14 @@ a {
 				outline: none;
 				}
 			}
-
-		button {
-			margin: 30px auto 0;
-			text-align: center;
+		.order-btn {
+			display: block;
+			margin: 0 auto;
+			width: 200px;
+			height: 36px;
+			border: none;
+			color: white;
+			background: $golder;
 			}
 		}
 	}

@@ -2532,7 +2532,7 @@ a {
   margin: 0; }
 
 #reservations .reservation-form {
-  margin: 30px auto 0;
+  margin: 20px auto 0;
   width: 430px;
   text-align: left; }
   #reservations .reservation-form .left-side {
@@ -2546,10 +2546,11 @@ a {
     content: "";
     display: table; }
   #reservations .reservation-form .half {
-    width: 200px; }
+    width: 200px;
+    margin-bottom: 10px; }
   #reservations .reservation-form label {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: block;
     font-family: "Open Sans", "Arial", sans-serif;
     font-size: 14px;
@@ -2561,7 +2562,7 @@ a {
       right: 10px;
       color: #7C7C7C; }
   #reservations .reservation-form input, #reservations .reservation-form select {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     padding: 10px 30px 10px 15px;
     width: 200px;
     height: 36px;
@@ -2593,9 +2594,14 @@ a {
     #reservations .reservation-form input:focus, #reservations .reservation-form select:focus {
       border-color: #c9a131;
       outline: none; }
-  #reservations .reservation-form button {
-    margin: 30px auto 0;
-    text-align: center; }
+  #reservations .reservation-form .order-btn {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 36px;
+    border: none;
+    color: white;
+    background: #c9a131; }
 
 .main-footer {
   padding: 50px 0;
